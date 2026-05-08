@@ -23,9 +23,9 @@ The project was built around a simple idea: students can create meaningful commu
 ## Core Workflow
 
 1. Curated notes, lessons, and project insights gathered across the semester
-2. Refined the underlying skill behavior based on what worked, what failed, and what needed to improve
-3. Iterated across multiple LLMs to improve structure, tone, and analytical clarity
-4. Condensed a much longer research base into two distinct client-facing formats: a concise core narrative and a deeper technical companion
+2. Refined a skill based on what worked, what failed, and what needed to improve for our personal project
+3. Iterated across multiple LLMs to improve structure, tone, and analytical clarity of the skill.
+4. Interacted  with two skills in Claude Code to condense a much longer research base into two distinct client-facing formats: a concise core narrative and a deeper technical companion
 5. Used Claude Code, Codex, and McKinsey-style consulting workflows to turn the reporting process into a reusable blueprint for student teams
 
 ## Skills and Methods
@@ -34,16 +34,6 @@ The project was built around a simple idea: students can create meaningful commu
 - `mckinsey-consultant` for hypothesis-driven analysis, MECE problem decomposition, storyline logic, and implementation planning
 - Human-in-the-loop review for expert feedback, refinement, and final approval at key checkpoints
 - Privacy-first AI use to keep sensitive information out of general-purpose models and preserve ethical standards
-
-## How I Used AI
-
-AI was not used as a substitute for critical thinking. It was used as a structured collaborator.
-
-- I used AI to refine prompts, organize notes, test report structures, and improve writing quality
-- I used skills not just to generate content, but to learn better ways to frame, structure, and package the work
-- I used iterative prompting to improve both the analytical logic and the communication quality of the final outputs
-- I used AI to help convert a large report into a tighter package with clearer audience separation and stronger usability
-- I used Claude Code and Codex to help transform the reporting workflow into a repeatable blueprint and implementation plan for future student teams
 
 ## Blueprint for Students
 
