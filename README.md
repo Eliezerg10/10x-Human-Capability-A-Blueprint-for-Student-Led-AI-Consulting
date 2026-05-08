@@ -35,15 +35,331 @@ The project was built around a simple idea: students can create meaningful commu
 - Human-in-the-loop review for expert feedback, refinement, and final approval at key checkpoints
 - Privacy-first AI use to keep sensitive information out of general-purpose models and preserve ethical standards
 
-## Blueprint for Students
+## The End-to-End Workflow
 
-This project is also meant to help other students learn how to work with AI more intentionally.
+The most important lesson from this project is that good AI-assisted work does not start with "write my report." It starts with structure.
 
-1. Start by defining the problem clearly before drafting anything
-2. Use skills to structure the work, not just to generate text
-3. Separate the executive story from the technical proof
-4. Use hypothesis-driven analysis to connect evidence to recommendations
-5. Keep humans responsible for judgment, privacy, and final decisions
+### Phase 1. Curate the raw material
+
+Start by gathering:
+
+- meeting notes,
+- research notes,
+- charts and spreadsheets,
+- prior drafts,
+- observations from teammates,
+- and any lessons learned from earlier project stages.
+
+Your goal here is not polish. It is consolidation.
+
+What students should produce:
+
+- one clean notes file,
+- one evidence list,
+- one list of open questions,
+- and one sentence describing the core problem.
+
+### Phase 2. Define the problem before drafting
+
+This is where `mckinsey-consultant` becomes valuable. Use it to define:
+
+- what the problem is,
+- what it is not,
+- who the audience is,
+- what decision the report needs to support,
+- and what deliverables you are actually building.
+
+Do not skip this step. A weak scope creates a weak report, even if the writing sounds polished.
+
+Example prompt:
+
+```text
+Help me define this project like a consulting engagement. Start with the problem boundary only.
+I need an Is / Isn't definition, a decision question, the audience, what is in scope,
+what is out of scope, and the deliverables I should produce.
+```
+
+What students should save:
+
+- `Is / Isn't` scope definition
+- decision question
+- intended audience
+- output package
+
+### Phase 3. Build an issue tree and working hypotheses
+
+Once the scope is clear, use `mckinsey-consultant` to break the problem into parts.
+
+This is where students stop thinking in paragraphs and start thinking in logic:
+
+- What are the major branches of the problem?
+- Which drivers belong together?
+- What evidence would prove or disprove each claim?
+
+Example prompt:
+
+```text
+Using the scope we defined, build a 2-3 level MECE issue tree.
+Then convert the main branches into testable hypotheses.
+For each hypothesis, tell me what evidence I need and what kind of source would support it.
+```
+
+What students should save:
+
+- issue tree
+- hypothesis list
+- first-pass evidence plan
+
+### Phase 4. Design the report before writing it
+
+One of the biggest mistakes students make is writing too early.
+
+Before drafting, decide what the final package should look like. In this project, the work became much stronger once I stopped treating the output as one long report and instead split it into:
+
+- a main executive report,
+- and a technical appendix.
+
+This separation creates clarity:
+
+- the main report is the argument,
+- the appendix is the proof.
+
+Use `consulting-analysis` and `mckinsey-consultant` to decide:
+
+- what belongs in the main narrative,
+- what belongs in backup materials,
+- what figures or tables prove each major claim,
+- and what order the story should follow.
+
+Example prompt:
+
+```text
+Design the structure for a two-document package: an executive report and a technical appendix.
+For each major hypothesis, tell me what belongs in the main report, what belongs in the appendix,
+and what chart, table, or proof asset best supports the claim.
+```
+
+What students should save:
+
+- report architecture
+- section outline
+- exhibit plan
+- appendix asset list
+
+### Phase 5. Build a source-disciplined evidence base
+
+This is where students need discipline. Not all evidence is the same.
+
+Separate your sources into clear buckets such as:
+
+- internal project materials,
+- public research,
+- benchmark or comparison data,
+- survey findings,
+- qualitative observations,
+- and implementation assumptions.
+
+If two sources use different definitions, label that difference. Do not blend them because the story looks cleaner. Clean storytelling with weak source logic is still bad analysis.
+
+Example prompt:
+
+```text
+Help me build an evidence checklist for each section of the report.
+Separate internal data, benchmark data, qualitative materials, and public context.
+Flag any source-definition risks and tell me what should be labeled clearly.
+```
+
+What students should save:
+
+- source register
+- evidence checklist
+- interpretation guardrails
+
+### Phase 6. Draft the executive story
+
+Only after the logic and evidence are in place should you draft the main report.
+
+Here the skill should help you:
+
+- write answer-first section titles,
+- keep paragraphs decision-oriented,
+- reduce unnecessary detail,
+- and clarify why each finding matters.
+
+This was one of the biggest gains in my own process. I used multiple LLM iterations to learn how to transform a much longer report into a tighter executive narrative that could be understood quickly without losing strategic value.
+
+Example prompt:
+
+```text
+Draft the main report in an executive style.
+Use answer-first section titles, compact paragraphs, and explicit implications.
+Do not overload the main report with backup proof that belongs in the appendix.
+```
+
+What students should save:
+
+- main report draft
+- answer-first section titles
+- recommendation summary
+
+### Phase 7. Draft the technical appendix
+
+The appendix is not a dumping ground. It is the proof system behind the main report.
+
+Use it to preserve:
+
+- definitions,
+- data caveats,
+- backup charts,
+- structured tables,
+- implementation templates,
+- and source traceability.
+
+The appendix makes the work more credible, more teachable, and more reusable for future teams.
+
+Example prompt:
+
+```text
+Help me build a technical appendix that supports the main report.
+For each major claim, suggest the right backup exhibit, table, note, definition, or template.
+Keep it detailed, but organized for reuse by future student teams.
+```
+
+What students should save:
+
+- appendix outline
+- backup exhibits
+- definitions and caveats
+- reusable templates
+
+### Phase 8. Use HITL to improve quality
+
+Human-in-the-loop review is not optional if the work matters.
+
+In this project, HITL added value by improving:
+
+- accuracy,
+- tone,
+- client readiness,
+- structure,
+- and practical usefulness.
+
+A strong HITL loop looks like this:
+
+1. Draft with the skill.
+2. Review the logic yourself.
+3. Ask an expert, mentor, or teammate to critique the structure, assumptions, and clarity.
+4. Revise the prompts or workflow, not just the wording.
+5. Repeat until the output is both accurate and useful.
+
+The goal is not to ask a human to approve AI writing blindly. The goal is to use expert review to improve the thinking system behind the output.
+
+### Phase 9. Turn the project into a reusable system
+
+One of the most valuable outcomes of this project was not the report itself. It was the systemization of the workflow.
+
+After the reporting process was working, I used Codex and the consulting skills to build:
+
+- a blueprint for student teams,
+- a PRD-style implementation plan,
+- and a more repeatable method for future engagements.
+
+This is where students can create long-term value. Instead of finishing one project and starting from zero on the next one, they can preserve:
+
+- prompts,
+- checklists,
+- templates,
+- review gates,
+- and report structures.
+
+That turns experience into infrastructure.
+
+## How To Use These Skills Well
+
+Students often get disappointing results from strong tools because they use them too vaguely. The skill matters, but the workflow matters more.
+
+### Best practices
+
+- Start with a narrow task, not a giant request
+- Ask the skill to do one stage at a time
+- Save outputs at each stage before moving on
+- Use the skill to structure analysis before generating prose
+- Separate brainstorming from final drafting
+- Revise the prompt when the logic is weak instead of endlessly revising the wording
+- Use multiple model passes when you need different strengths such as structure, tone, or compression
+
+### Common mistakes
+
+- Asking for the whole report before defining the problem
+- Mixing executive narrative and technical backup in the same document
+- Letting the model invent certainty where the evidence is weak
+- Failing to label source differences
+- Treating AI output as final instead of as a draft or analytical partner
+- Forgetting to preserve what worked for future teams
+
+## A Practical Prompt Sequence Students Can Reuse
+
+These are generic prompt shapes that students can adapt to their own projects.
+
+### 1. Problem framing
+
+```text
+Help me frame this as a consulting problem.
+Define the decision question, the audience, the scope, the exclusions, and the deliverables.
+Do not draft the report yet.
+```
+
+### 2. Issue tree
+
+```text
+Build a MECE issue tree for this problem.
+Keep it practical for a student team and explain why each branch matters.
+```
+
+### 3. Hypothesis design
+
+```text
+Turn the issue tree into testable hypotheses.
+For each one, tell me what evidence would support it and what might weaken it.
+```
+
+### 4. Evidence planning
+
+```text
+Create an evidence plan for each hypothesis.
+Separate internal sources, public sources, benchmark sources, and qualitative material.
+Flag definition risks and evidence gaps.
+```
+
+### 5. Story architecture
+
+```text
+Design a two-document deliverable package:
+an executive report and a technical appendix.
+Tell me what belongs in each and what proof asset each major claim needs.
+```
+
+### 6. Executive drafting
+
+```text
+Draft the executive report with answer-first section titles, concise paragraphs, and clear implications.
+Keep the tone professional and actionable.
+```
+
+### 7. Appendix drafting
+
+```text
+Draft the technical appendix so it supports the report without repeating it.
+Preserve definitions, backup exhibits, and reusable tools.
+```
+
+### 8. QA and revision
+
+```text
+Review this package like a senior consultant.
+Find weak logic, missing proof, unclear definitions, and places where the recommendation is not fully supported.
+```
+
 
 ## Outcomes
 
